@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Speed Controller</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h3>Video Speed Controller</h3>
+      <div class="video-info">
+        <span id="videoCount">Scanning...</span>
+      </div>
+    </div>
+    
+    <div class="speed-section">
+      <div class="current-speed">
+        <span>Current Speed: </span>
+        <span id="currentSpeed">1.0x</span>
+      </div>
+      
+      <div class="speed-controls">
+        <div class="preset-speeds">
+          <button class="speed-btn" data-speed="0.25">0.25x</button>
+          <button class="speed-btn" data-speed="0.5">0.5x</button>
+          <button class="speed-btn" data-speed="0.75">0.75x</button>
+          <button class="speed-btn active" data-speed="1">1x</button>
+          <button class="speed-btn" data-speed="1.25">1.25x</button>
+          <button class="speed-btn" data-speed="1.5">1.5x</button>
+          <button class="speed-btn" data-speed="1.75">1.75x</button>
+          <button class="speed-btn" data-speed="2">2x</button>
+          <button class="speed-btn" data-speed="2.5">2.5x</button>
+          <button class="speed-btn" data-speed="3">3x</button>
+          <button class="speed-btn" data-speed="4">4x</button>
+          <button class="speed-btn" data-speed="5">5x</button>
+        </div>
+      </div>
+      
+      <div class="custom-speed">
+        <label for="speedSlider">Custom Speed:</label>
+        <input type="range" id="speedSlider" min="0.25" max="5" step="0.01" value="1">
+        <span id="sliderValue">1.0x</span>
+      </div>
+      
+      <div class="shortcut-increment">
+        <label for="incrementSlider">Keyboard Shortcut Step:</label>
+        <input type="range" id="incrementSlider" min="0.05" max="0.5" step="0.05" value="0.25">
+        <span id="incrementValue">0.25x</span>
+      </div>
+    </div>
+    
+    <div class="shortcuts">
+      <h4>Keyboard Shortcuts:</h4>
+      <div class="shortcut-item">
+        <span class="shortcut-key">Ctrl+Shift+↑</span>
+        <span>Increase Speed</span>
+      </div>
+      <div class="shortcut-item">
+        <span class="shortcut-key">Ctrl+Shift+↓</span>
+        <span>Decrease Speed</span>
+      </div>
+      <div class="shortcut-item">
+        <span class="shortcut-key">Ctrl+Shift+R</span>
+        <span>Reset to 1x</span>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

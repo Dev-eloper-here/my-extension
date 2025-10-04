@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Video Speed Controller",
+  "version": "1.0",
+  "description": "Control video playback speed up to 5x on any webpage",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Video Speed Controller"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
